@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SMS/Email Spam Classifier</title>
+</head>
+<body>
+    <h1>SMS/Email Spam Classifier</h1>
+
+    <form method="POST" action="/predict">
+        <label for="message">Enter your SMS message:</label><br><br>
+        <textarea id="message" name="message" rows="5" cols="60" placeholder="Type your message here..."></textarea><br><br>
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction_text %}
+        <h3>Prediction Result: {{ prediction_text }}</h3>
+    {% endif %}
+</body>
+</html>
